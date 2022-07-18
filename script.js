@@ -7,22 +7,6 @@ function getComputerChoice()
     return chosen;
 }
 
-// prompt user for their choice
-let playerSelection = prompt("Please type rock, paper, or scissors", "rock");
-
-// set user input to lowercase
-playerSelection = playerSelection.toLowerCase();
-
-// make sure user made valid choice
-while(playerSelection != "rock" && playerSelection != "paper" && playerSelection != "scissors")
-{
-    playerSelection = prompt("Please type rock, paper, or scissors", "rock");
-    playerSelection.toLowerCase();
-}
-
-// call getComputerChoice and set it to computerSelection
-let computerSelection = getComputerChoice();
-
 // function that compares player and computer selections and returns results
 function playRound(playerSelection, computerSelection)
 {
@@ -70,5 +54,28 @@ function playRound(playerSelection, computerSelection)
         {
             return "Tie! You both chose scissors!"
         }
+    }
+}
+
+// function that plays 5 rounds
+function game()
+{
+    for (let i = 0; i < 5; i++)
+    {
+       // prompt user for their choice
+        let playerSelection = prompt("Please type rock, paper, or scissors", "rock");
+
+        // set user input to lowercase
+        playerSelection = playerSelection.toLowerCase();
+
+        // make sure user made valid choice
+        while(playerSelection != "rock" && playerSelection != "paper" && playerSelection != "scissors")
+        {
+            playerSelection = prompt("Please type rock, paper, or scissors", "rock");
+            playerSelection.toLowerCase();
+        }
+
+        // call getComputerChoice and set it to computerSelection
+        let computerSelection = getComputerChoice();
     }
 }

@@ -86,5 +86,8 @@ function game()
 
         // call getComputerChoice and set it to computerSelection
         let computerSelection = getComputerChoice();
+
+        // call playRound function and log it
+        console.log(playRound());
     }
 }

@@ -88,7 +88,7 @@ function game()
         let computerSelection = getComputerChoice();
 
         // call playRound function and log it
-        console.log(playRound(playerSelection, computerScore));
+        console.log(playRound(playerSelection, computerSelection));
 
         console.log("Player Score: " + playerScore);
         console.log("Computer Score: " + computerScore);
@@ -100,7 +100,7 @@ function game()
     }
     else if (computerScore > playerScore)
     {
-        console.log("You Lose1!");
+        console.log("You Lose!");
     }
     else 
     {

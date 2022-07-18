@@ -89,5 +89,8 @@ function game()
 
         // call playRound function and log it
         console.log(playRound());
+
+        console.log("Player Score: " + playerScore);
+        console.log("Computer Score: " + computerScore);
     }
 }

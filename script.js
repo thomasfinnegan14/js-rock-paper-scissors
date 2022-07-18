@@ -16,4 +16,4 @@ while(playerSelection != "rock" && playerSelection != "paper" && playerSelection
     playerSelection.toLowerCase();
 }
 
-const computerSelection = getComputerChoice();
+let computerSelection = getComputerChoice();

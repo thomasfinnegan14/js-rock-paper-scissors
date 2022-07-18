@@ -1,3 +1,4 @@
+// function that chooses computer's choice randomly
 function getComputerChoice()
 {
     let options = ["rock", "paper", "scissors"];
@@ -6,18 +7,23 @@ function getComputerChoice()
     return chosen;
 }
 
+// prompt user for their choice
 let playerSelection = prompt("Please type rock, paper, or scissors", "rock");
 
+// set user input to lowercase
 playerSelection = playerSelection.toLowerCase();
 
+// make sure user made valid choice
 while(playerSelection != "rock" && playerSelection != "paper" && playerSelection != "scissors")
 {
     playerSelection = prompt("Please type rock, paper, or scissors", "rock");
     playerSelection.toLowerCase();
 }
 
+// call getComputerChoice and set it to computerSelection
 let computerSelection = getComputerChoice();
 
+// function that compares player and computer selections and returns results
 function playRound(playerSelection, computerSelection)
 {
     if (playerSelection == "rock")

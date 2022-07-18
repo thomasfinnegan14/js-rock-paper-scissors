@@ -88,7 +88,7 @@ function game()
         let computerSelection = getComputerChoice();
 
         // call playRound function and log it
-        console.log(playRound());
+        console.log(playRound(playerSelection, computerScore));
 
         console.log("Player Score: " + playerScore);
         console.log("Computer Score: " + computerScore);
@@ -107,3 +107,5 @@ function game()
         console.log("It's a tie!");
     }
 }
+
+game();

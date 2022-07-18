@@ -7,6 +7,9 @@ function getComputerChoice()
     return chosen;
 }
 
+let playerScore = 0;
+let computerScore = 0;
+
 // function that compares player and computer selections and returns results
 function playRound(playerSelection, computerSelection)
 {

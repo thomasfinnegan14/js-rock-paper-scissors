@@ -17,3 +17,52 @@ while(playerSelection != "rock" && playerSelection != "paper" && playerSelection
 }
 
 let computerSelection = getComputerChoice();
+
+function playRound(playerSelection, computerSelection)
+{
+    if (playerSelection == "rock")
+    {
+        if (computerSelection == "rock")
+        {
+            return "Tie! You both chose rock!"
+        }
+        else if (computerSelection == "paper")
+        {
+            return "You Lose! Paper beats rock!"
+        }
+        else
+        {
+            return "You Win! Rock beats scissors!"
+        }
+    }
+    else if (playerSelection == "paper")
+    {
+        if (computerSelection == "rock")
+        {
+            return "You Win! Paper beats rock!"
+        }
+        else if (computerSelection == "paper")
+        {
+            return "Tie! You both chose paper!"
+        }
+        else
+        {
+            return "You Lose! Scissors beats paper!"
+        }
+    }
+    else
+    {
+        if (computerSelection == "rock")
+        {
+            return "You Lose! Rock beats scissors!"
+        }
+        else if (computerSelection == "paper")
+        {
+            return "You Win! Scissors beats paper!"
+        }
+        else
+        {
+            return "Tie! You both chose scissors!"
+        }
+    }
+}

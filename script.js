@@ -74,11 +74,19 @@ function game()
         // call getComputerChoice and set it to computerSelection
         let computerSelection = getComputerChoice();
 
-        // call playRound function and log it
-        console.log(playRound(playerSelection, computerSelection));
+        const displayText = document.querySelector("#results");
 
-        console.log("Player Score: " + playerScore);
-        console.log("Computer Score: " + computerScore);
+        const roundwin = document.createElement('h2');
+        roundwin.textContent = playRound(playerSelection, computerSelection);
+        displayText.appendChild(roundwin);
+
+        const playercurrent = document.createElement('h4');
+        playercurrent.textContent = "Player Score: " + playerScore;
+        displayText.appendChild(playercurrent);
+
+        const compcurrent = document.createElement('h4');
+        compcurrent.textContent = "Computer Score: " + computerScore;
+        displayText.appendChild(compcurrent);
 
 
     if (playerScore > computerScore)

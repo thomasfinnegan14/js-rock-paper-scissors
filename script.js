@@ -10,6 +10,8 @@ function getComputerChoice()
 let playerScore = 0;
 let computerScore = 0;
 
+let playerSelection = "";
+
 // function that compares player and computer selections and returns results
 function playRound(playerSelection, computerSelection)
 {
@@ -69,19 +71,6 @@ function playRound(playerSelection, computerSelection)
 // function that plays 5 rounds
 function game()
 {
-       // prompt user for their choice
-        let playerSelection = prompt("Please type rock, paper, or scissors", "rock");
-
-        // set user input to lowercase
-        playerSelection = playerSelection.toLowerCase();
-
-        // make sure user made valid choice
-        while(playerSelection != "rock" && playerSelection != "paper" && playerSelection != "scissors")
-        {
-            playerSelection = prompt("Please type rock, paper, or scissors", "rock");
-            playerSelection.toLowerCase();
-        }
-
         // call getComputerChoice and set it to computerSelection
         let computerSelection = getComputerChoice();
 
@@ -106,4 +95,26 @@ function game()
     }
 }
 
-game();
+const rockbtn = document.querySelector('#rock');
+
+rockbtn.addEventListener("click", function()
+{
+    playerSelection = "rock";
+    game();
+});
+
+const paperbtn = document.querySelector('#paper');
+
+paperbtn.addEventListener("click", function()
+{
+    playerSelection = "paper";
+    game();
+});
+
+const scissorbtn = document.querySelector('#scissors');
+
+scissorbtn.addEventListener("click", function()
+{
+    playerSelection = "scissors";
+    game();
+});

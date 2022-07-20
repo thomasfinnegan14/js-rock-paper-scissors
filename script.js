@@ -69,8 +69,6 @@ function playRound(playerSelection, computerSelection)
 // function that plays 5 rounds
 function game()
 {
-    for (let i = 0; i < 5; i++)
-    {
        // prompt user for their choice
         let playerSelection = prompt("Please type rock, paper, or scissors", "rock");
 
@@ -92,7 +90,7 @@ function game()
 
         console.log("Player Score: " + playerScore);
         console.log("Computer Score: " + computerScore);
-    }
+
 
     if (playerScore > computerScore)
     {

@@ -68,7 +68,7 @@ function playRound(playerSelection, computerSelection)
     }
 }
 
-// function that plays 5 rounds
+
 function game()
 {
         // call getComputerChoice and set it to computerSelection
@@ -88,41 +88,49 @@ function game()
         compcurrent.textContent = "Computer Score: " + computerScore;
         displayText.appendChild(compcurrent);
 
-
-    if (playerScore > computerScore)
-    {
-        console.log("You Win!");
-    }
-    else if (computerScore > playerScore)
-    {
-        console.log("You Lose!");
-    }
-    else 
-    {
-        console.log("It's a tie!");
-    }
+        if (playerScore >= 5)
+        {
+            rockbtn.remove();
+            paperbtn.remove();
+            scissorbtn.remove();
+        
+            const playerwin = document.createElement('h1');
+            playerwin.textContent = "You Win!";
+            displayText.appendChild(playerwin);
+        }
+        else if (computerScore >= 5)
+        {
+            rockbtn.remove();
+            paperbtn.remove();
+            scissorbtn.remove();
+            
+            const compwin = document.createElement('h1');
+            compwin.textContent = "You Lose!";
+            displayText.appendChild(compwin);
+        }
+        
 }
 
 const rockbtn = document.querySelector('#rock');
-
-rockbtn.addEventListener("click", function()
-{
-    playerSelection = "rock";
-    game();
-});
-
 const paperbtn = document.querySelector('#paper');
-
-paperbtn.addEventListener("click", function()
-{
-    playerSelection = "paper";
-    game();
-});
-
 const scissorbtn = document.querySelector('#scissors');
 
-scissorbtn.addEventListener("click", function()
-{
-    playerSelection = "scissors";
-    game();
-});
+    rockbtn.addEventListener("click", function()
+    {
+        playerSelection = "rock";
+        game();
+    });
+    
+    
+    paperbtn.addEventListener("click", function()
+    {
+        playerSelection = "paper";
+        game();
+    });
+    
+    
+    scissorbtn.addEventListener("click", function()
+    {
+        playerSelection = "scissors";
+        game();
+    });
